@@ -1,0 +1,126 @@
+<!DOCTYPE>
+<html>
+<head>
+  <title> Home Page </title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<style type="text/css">
+  body {
+ background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("images/light1.jpg")!important;
+  margin:0;
+  font-family:Arial;
+  background-position:center;
+  background-size:cover;
+  color:#ffffff!important;
+}
+.form-container h1{
+  font-weight: bold;
+}
+.form-container{
+  border:0px solid #fff;
+  padding:50px 60px;
+  margin-top: 3vh;
+  -webkit-box-shadow: -1px 4px 26px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 4px 26px 0px rgba(0,0,0,0.75);
+  box-shadow: -1px 4px 26px 0px rgba(0,0,0,0.75);
+}
+.form-group{
+  margin-left:0px !important;
+  margin-top:3vh !important;
+  margin-bottom: 2vh !important;
+}
+.btn{
+  margin-top: 20px !important;
+  background-color:red !important;
+  color:#fff;
+}
+#addser hr{
+   height:4px;
+  background-color:green;
+  border:none;
+}
+#addser button {
+  background-color:blue !important;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  cursor: pointer;
+}
+#addser button:hover
+{
+  background-color: red !important;
+}
+.required-field::after{
+  content:"*";
+  color:red;
+}
+#addser h2{
+  margin-top:0px;
+  color:#000033;
+}
+.navbar{
+  background:black !important;
+  border-color: #425766 !important;
+  font-weight: bold !important;
+
+}
+.navbar-brand{
+  color: orange !important;
+  font-weight: bold;
+  font-size: 50px !important;
+}
+</style>
+</head>
+<body>
+<div class="col-md-4 col-sm-4 col-xs-12"></div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <form class="form-container" id="addser" action="" method="POST"  enctype="multipart/form-data">
+          <h2>Send Message</h2>
+          <hr>
+          <div class="form-group">
+           <label></span>Service Name <span class="required-field"></span></label>
+                <div class="input-group">
+                    <input class="form-control" name="sname" size="50" placeholder="Enter Name of provider" required oninvalid="this.setCustomValidity('Enter Name Of Service')" oninput="this.setCustomValidity('')">
+                </div>
+          </div>
+          <div class="form-group">
+                <label></span>Choose Service Type<span class="required-field"></span></label>
+                  <p><select class="form-control" id="sel" name="stype" required>
+                    <option></option>
+                    <option>Sound</option>
+                    <option>Catering</option>
+                  </select>
+                  </p>
+          </div>
+          <div class="form-group">
+           <label></span>Charges/Amount (in Rs) <span class="required-field"></span></label>
+                <div class="input-group">
+                    <input class="form-control" name="amm" size="50" placeholder="Enter Amount" required oninvalid="this.setCustomValidity('Enter Charges')" oninput="this.setCustomValidity('')">
+                </div>
+          </div>
+          <div class="form-group">
+           <label></span>Upload File <span class="required-field"></span></label>
+                <div class="input-group">
+                    <input type="file" class="file-upload" name="image" size="30" required>
+                </div>
+          </div>
+          <div class="form-group">
+            <label></span>Discription<span class="required-field"></span></label>
+                <div class="input-group">
+                    <textarea class="form-control" cols="100" rows="6" name="disc" placeholder="About your provider" required oninvalid="this.setCustomValidity('Please Enter discription')" oninput="this.setCustomValidity('')"></textarea>
+                </div>
+          </div>
+          
+          <div class="form-group">
+            <button type="submit" name="submit1" class="btn btn-success btn-block" id="sign">Submit</button>
+          </div>
+        </form>
+      </div>
+</div>
+</body>
+</html>
